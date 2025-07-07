@@ -3,139 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FISIX — Premium Streetwear. Affordable Pricing.</title>
+  <title>FISIX | Affordable Premium Streetwear</title>
+  <link rel="icon" type="image/png" href="favicon.png"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #141414;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
+      padding: 20px;
     }
-
-    header {
-      padding: 60px 20px 30px;
+    .logo-box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 30px;
     }
-
-    header img {
-      width: 150px;
-      margin-bottom: 25px;
+    .logo-box img {
+      width: 140px;
     }
-
     h1 {
-      font-size: 3rem;
-      margin: 0;
-      letter-spacing: 3px;
-      color: #222;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
-      color: #666;
-      margin-top: 12px;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      color: #444;
-      margin-top: 30px;
-      font-weight: 500;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 14px 35px;
-      background-color: #FFD700;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
-
-    .cta:hover {
-      background-color: #e6c200;
-    }
-
-    section {
-      padding: 50px 20px;
-    }
-
-    section h2 {
-      color: #222;
+      font-size: 2.4rem;
       margin-bottom: 10px;
     }
-
-    section p {
-      color: #555;
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto;
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+      color: #d4d4d4;
     }
-
-    .contact {
-      margin-top: 50px;
-      font-size: 1rem;
-      color: #555;
+    .socials a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
     }
-
-    .contact p {
-      margin: 6px 0;
+    .socials img {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+      vertical-align: middle;
     }
-
     footer {
-      margin-top: 60px;
-      padding: 25px;
-      font-size: 0.85rem;
+      margin-top: 40px;
+      font-size: 0.9rem;
       color: #999;
-      border-top: 1px solid #ddd;
     }
-
-    @media (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
       }
-
-      .subtitle {
+      p {
         font-size: 1rem;
-      }
-
-      .tagline {
-        font-size: 1.1rem;
-        padding: 0 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="fisix-logo.png" alt="Fisix Logo" />
-    <h1>FISIX</h1>
-    <p class="subtitle">Made in Ludhiana. Designed for Every Man.</p>
-    <p class="tagline">
-      Built for Every Man — from the bold to the laid-back. Rooted in culture, designed to stand out, and priced with purpose.
-    </p>
-    <a class="cta" href="https://www.instagram.com/fisix_wear/" target="_blank">Follow on Instagram</a>
-  </header>
-
-  <section>
-    <h2>🚀 Launching Soon</h2>
-    <p>Affordable fashion redefined. From casual to bold, FISIX is for men of every style, age, and attitude. Premium quality. No premium pricing.</p>
-  </section>
-
-  <div class="contact">
-    <p>📍 Ludhiana, Punjab</p>
-    <p>📞 +91-62398 19213</p>
-    <p>✉️ fisixwear@gmail.com</p>
+  <!-- Logo -->
+  <div class="logo-box">
+    <img src="fisix-logo.png" alt="Fisix Logo">
   </div>
 
+  <!-- Headline & Tagline -->
+  <h1>Engineered for Every Man</h1>
+  <p>Born from culture. Designed to turn heads — without burning wallets.</p>
+
+  <!-- Instagram Link -->
+  <div class="socials">
+    <a href="https://www.instagram.com/fisix.store/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+      Follow us on Instagram
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 FISIX. All Rights Reserved.
+    <p>Contact: Pawan | 📞 +91-6239819213 | ✉️ fisixwear@gmail.com</p>
+    <p>© 2025 FISIX. All rights reserved.</p>
   </footer>
 
 </body>
