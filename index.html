@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FISIX | Premium Streetwear</title>
+<title>FISIX | Future Streetwear</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,44 +20,75 @@ box-sizing:border-box;
 
 body{
 
-font-family:'Poppins',sans-serif;
+font-family:'Space Grotesk',sans-serif;
 
-background:#070707;
+background:#050505;
+
+color:white;
+
+overflow-x:hidden;
+}
+
+/* ANIMATED BACKGROUND */
+
+.bg{
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+top:0;
+left:0;
 
 overflow:hidden;
 
-color:white;
+z-index:-2;
 }
 
-/* BACKGROUND GLOW */
-
-.bg-glow{
+.bg span{
 
 position:absolute;
 
-width:700px;
-height:700px;
+display:block;
 
-background:rgba(212,175,55,0.15);
+width:300px;
+height:300px;
 
-filter:blur(140px);
+background:rgba(212,175,55,0.08);
 
 border-radius:50%;
 
-top:-200px;
-right:-150px;
+filter:blur(120px);
 
-animation:floatGlow 8s ease-in-out infinite;
+animation:float 10s infinite ease-in-out;
 }
 
-@keyframes floatGlow{
+.bg span:nth-child(1){
+top:10%;
+left:5%;
+}
+
+.bg span:nth-child(2){
+bottom:5%;
+right:10%;
+animation-delay:2s;
+}
+
+.bg span:nth-child(3){
+top:50%;
+left:45%;
+animation-delay:4s;
+}
+
+@keyframes float{
 
 0%{
 transform:translateY(0px);
 }
 
 50%{
-transform:translateY(30px);
+transform:translateY(-40px);
 }
 
 100%{
@@ -70,277 +101,348 @@ transform:translateY(0px);
 
 .hero{
 
-position:relative;
-
 min-height:100vh;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-padding:20px;
-
-overflow:hidden;
+padding:40px 20px;
 }
 
-/* FLOATING CARD */
+/* MAIN BOX */
 
-.card{
+.main-box{
 
 position:relative;
 
-width:420px;
+width:100%;
+max-width:1200px;
 
-padding:45px;
+padding:70px;
 
-border-radius:35px;
+border-radius:40px;
 
-background:rgba(255,255,255,0.05);
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.06),
+rgba(255,255,255,0.02)
+);
 
 border:1px solid rgba(255,255,255,0.08);
 
 backdrop-filter:blur(18px);
 
+overflow:hidden;
+
 box-shadow:
-0 25px 60px rgba(0,0,0,0.55),
-0 0 40px rgba(212,175,55,0.08);
+0 0 60px rgba(0,0,0,0.5),
+0 0 120px rgba(212,175,55,0.08);
 
-text-align:center;
-
-transform-style:preserve-3d;
-
-animation:floatCard 5s ease-in-out infinite;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
 }
 
-@keyframes floatCard{
+/* GLOW */
 
-0%{
-transform:translateY(0px);
+.main-box::before{
+
+content:'';
+
+position:absolute;
+
+width:400px;
+height:400px;
+
+background:rgba(212,175,55,0.12);
+
+border-radius:50%;
+
+filter:blur(120px);
+
+top:-150px;
+right:-100px;
 }
 
-50%{
-transform:translateY(-18px);
+/* LEFT */
+
+.left{
+
+position:relative;
+
+z-index:2;
+
+max-width:600px;
 }
 
-100%{
-transform:translateY(0px);
-}
+.small{
 
-}
+font-size:0.9rem;
 
-/* LOGO */
-
-.logo{
-
-width:130px;
-
-margin-bottom:25px;
-
-border-radius:16px;
-
-filter:drop-shadow(0 0 15px rgba(212,175,55,0.2));
-}
-
-/* BRAND */
-
-.small-text{
-
-letter-spacing:4px;
-
-font-size:0.8rem;
+letter-spacing:5px;
 
 color:#d4af37;
 
-margin-bottom:15px;
+margin-bottom:25px;
 }
 
 h1{
 
-font-size:5rem;
+font-size:7rem;
 
-font-weight:800;
+line-height:0.9;
 
-letter-spacing:10px;
+margin-bottom:30px;
 
-line-height:1;
-
-margin-bottom:20px;
+font-weight:700;
 }
 
 .gold{
 color:#d4af37;
 }
 
-.tagline{
+.desc{
 
-font-size:1rem;
+font-size:1.1rem;
 
 line-height:2;
 
 color:#d0d0d0;
 
-margin-bottom:35px;
+margin-bottom:45px;
+
+max-width:550px;
 }
 
-/* BUTTON */
+/* BUTTONS */
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+}
 
 .btn{
 
-display:inline-block;
+padding:17px 34px;
 
-padding:16px 34px;
-
-border-radius:50px;
-
-background:#d4af37;
-
-color:#111;
+border-radius:60px;
 
 text-decoration:none;
 
 font-weight:600;
 
 transition:0.35s ease;
-
-box-shadow:0 12px 35px rgba(212,175,55,0.22);
 }
 
-.btn:hover{
+.primary{
 
-transform:translateY(-5px) scale(1.04);
+background:#d4af37;
 
-background:#ebc95b;
+color:#111;
+
+box-shadow:0 15px 40px rgba(212,175,55,0.25);
 }
 
-/* FLOATING CIRCLES */
+.primary:hover{
 
-.circle1,
-.circle2{
+transform:translateY(-6px) scale(1.04);
 
-position:absolute;
-
-border-radius:50%;
-
-background:rgba(255,255,255,0.04);
-
-backdrop-filter:blur(10px);
+background:#f1cd58;
 }
 
-.circle1{
+.secondary{
 
-width:180px;
-height:180px;
+background:rgba(255,255,255,0.06);
 
-top:12%;
-left:12%;
+border:1px solid rgba(255,255,255,0.12);
 
-animation:move1 6s ease-in-out infinite;
+color:white;
 }
 
-.circle2{
+.secondary:hover{
 
-width:120px;
-height:120px;
+background:white;
 
-bottom:15%;
-right:15%;
+color:#111;
 
-animation:move2 7s ease-in-out infinite;
+transform:translateY(-6px);
 }
 
-@keyframes move1{
+/* RIGHT SIDE */
 
-0%{
-transform:translateY(0px);
+.right{
+
+position:relative;
+
+z-index:2;
 }
 
-50%{
-transform:translateY(-25px);
+/* FLOATING CARD */
+
+.card{
+
+width:340px;
+
+padding:25px;
+
+border-radius:35px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.03)
+);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+transform:rotate(-8deg);
+
+transition:0.5s ease;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.55);
 }
 
-100%{
-transform:translateY(0px);
+.card:hover{
+
+transform:rotate(0deg) scale(1.05);
 }
 
+.card img{
+
+width:100%;
+
+border-radius:25px;
+
+margin-bottom:20px;
 }
 
-@keyframes move2{
+.card h3{
 
-0%{
-transform:translateY(0px);
+font-size:1.7rem;
+
+margin-bottom:10px;
 }
 
-50%{
-transform:translateY(20px);
+.card p{
+
+color:#cfcfcf;
+
+line-height:1.8;
 }
 
-100%{
-transform:translateY(0px);
+/* ABOUT */
+
+.about{
+
+padding:120px 10%;
+
+text-align:center;
 }
 
+.about h2{
+
+font-size:3rem;
+
+margin-bottom:30px;
+
+color:#d4af37;
+}
+
+.about p{
+
+max-width:1000px;
+
+margin:auto;
+
+line-height:2.3;
+
+font-size:1rem;
+
+color:#d0d0d0;
 }
 
 /* FOOTER */
 
-.footer{
+footer{
 
-position:absolute;
-
-bottom:20px;
-
-width:100%;
+padding:50px 20px;
 
 text-align:center;
 
-font-size:0.9rem;
-
-color:#888;
+color:#777;
 }
 
-.footer a{
+footer a{
 color:#d4af37;
 text-decoration:none;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:1000px){
+
+.main-box{
+
+flex-direction:column;
+
+padding:50px 25px;
+
+text-align:center;
+}
+
+.left{
+max-width:100%;
+}
+
+h1{
+
+font-size:4rem;
+}
+
+.desc{
+
+font-size:1rem;
+}
+
+.buttons{
+justify-content:center;
+}
 
 .card{
 
 width:100%;
 
-max-width:340px;
+max-width:320px;
 
-padding:35px 25px;
+transform:none;
 }
 
-h1{
+.about{
 
-font-size:3rem;
-
-letter-spacing:5px;
+padding:80px 20px;
 }
 
-.tagline{
-font-size:0.92rem;
-line-height:1.9;
+.about h2{
+
+font-size:2.2rem;
 }
 
-.logo{
-width:100px;
-}
+.about p{
 
-.circle1{
-width:120px;
-height:120px;
-left:-30px;
-}
+font-size:0.95rem;
 
-.circle2{
-width:90px;
-height:90px;
-right:-20px;
+line-height:2;
 }
 
 }
@@ -351,45 +453,144 @@ right:-20px;
 
 <body>
 
-<div class="bg-glow"></div>
+<!-- BACKGROUND -->
 
-<div class="circle1"></div>
-<div class="circle2"></div>
+<div class="bg">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="card">
+<div class="main-box">
 
-<img src="fisix-logo.png" alt="FISIX Logo" class="logo">
+<!-- LEFT -->
 
-<p class="small-text">
-PREMIUM STREETWEAR
+<div class="left">
+
+<p class="small">
+FUTURE OF STREETWEAR
 </p>
 
 <h1>
-FI<span class="gold">SIX</span>
+
+WEAR THE <span class="gold">ENERGY</span>
+
 </h1>
 
-<p class="tagline">
+<p class="desc">
 
-Minimal aesthetics.
-Oversized confidence.
-Affordable premium fashion
-inspired by modern street culture.
+FISIX blends luxury-inspired aesthetics,
+street culture,
+oversized confidence,
+and modern minimalism into one identity.
+
+Built for the generation that wants to stand out
+without looking like everyone else.
 
 </p>
 
-<a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn">
+<div class="buttons">
+
+<a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn primary">
 
 Explore Collection
 
 </a>
 
+<a href="mailto:fisixwear@gmail.com" class="btn secondary">
+
+Contact Us
+
+</a>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right">
+
+<div class="card">
+
+<img src="fisix-logo.png" alt="FISIX">
+
+<h3>
+FISIX
+</h3>
+
+<p>
+
+Minimal.
+Bold.
+Affordable.
+
+Fashion engineered for modern confidence.
+
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
-<div class="footer">
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>
+Our Story
+</h2>
+
+<p>
+
+FISIX started with one thought —
+why does premium fashion always feel inaccessible?
+
+We grew up watching trends change overnight,
+but originality becoming rare.
+
+Most brands were either overpriced,
+overhyped,
+or trying too hard.
+
+So we built FISIX differently.
+
+A brand inspired by modern culture,
+streetwear,
+minimal aesthetics,
+and everyday confidence.
+
+No loud distractions.
+No fake luxury.
+No unnecessary pricing.
+
+Just clean fashion made for the new generation.
+
+This is more than clothing.
+
+It’s energy.
+It’s identity.
+It’s confidence.
+
+Welcome to FISIX.
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
 
 <p>
 📞 Pawan | +91 62398 19213
@@ -402,7 +603,13 @@ fisixwear@gmail.com
 </a>
 </p>
 
-</div>
+<br>
+
+<p>
+© 2026 FISIX. All rights reserved.
+</p>
+
+</footer>
 
 </body>
 
