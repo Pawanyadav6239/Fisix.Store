@@ -1,102 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>FISIX | Affordable Premium Streetwear</title>
-  <link rel="icon" type="image/png" href="favicon.png"/>
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #141414;
-      color: #d4af37; /* golden text */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
-    img.logo {
-      width: 140px;
-      margin-bottom: 30px;
-      border-radius: 8px;
+
+    body{
+      background:#0f0f0f;
+      color:#d4af37;
+      font-family:Arial, sans-serif;
+
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+
+      padding:20px;
     }
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-      color: #d4af37;
+
+    .container{
+      max-width:700px;
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin-bottom: 30px;
-      color: #d4af37;
+
+    .logo{
+      width:140px;
+      margin-bottom:30px;
+      border-radius:10px;
     }
-    .socials a {
-      background-color: #1e1e1e;
-      padding: 12px 20px;
-      border-radius: 30px;
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.3s ease;
+
+    h1{
+      font-size:3rem;
+      margin-bottom:15px;
+      letter-spacing:4px;
     }
-    .socials a:hover {
-      background-color: #333;
+
+    .tagline{
+      color:#ffffff;
+      font-size:1.2rem;
+      margin-bottom:15px;
     }
-    .socials img {
-      width: 20px;
-      height: 20px;
-      filter: brightness(1.5); /* make icon brighter */
+
+    .desc{
+      color:#bbbbbb;
+      line-height:1.7;
+      margin-bottom:40px;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.95rem;
-      color: #d4af37;
+
+    .btn{
+      display:inline-block;
+
+      background:#d4af37;
+      color:#111111;
+
+      padding:14px 28px;
+
+      text-decoration:none;
+
+      border-radius:40px;
+
+      font-weight:bold;
+
+      transition:0.3s ease;
     }
-    footer span {
-      margin: 0 5px;
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#ebc95b;
     }
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
+
+    footer{
+      margin-top:50px;
+      color:#888888;
+      font-size:0.95rem;
+      line-height:1.8;
+    }
+
+    footer a{
+      color:#d4af37;
+      text-decoration:none;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:2.2rem;
       }
-      p {
-        font-size: 1rem;
+
+      .tagline{
+        font-size:1rem;
       }
+
+      .desc{
+        font-size:0.95rem;
+      }
+
     }
+
   </style>
+
 </head>
+
 <body>
 
-  <!-- Logo -->
-  <img src="fisix-logo.png" alt="Fisix Logo" class="logo" />
+  <div class="container">
 
-  <!-- Headline -->
-  <h1>Engineered for Every Man</h1>
-  <p>Born from culture. Designed to turn heads — without burning wallets.</p>
+    <img src="fisix-logo.png" class="logo" alt="FISIX Logo">
 
-  <!-- Instagram -->
-  <div class="socials">
-    <a href="https://www.instagram.com/fisix.store/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-      Follow us on Instagram
+    <h1>FISIX</h1>
+
+    <p class="tagline">
+      Engineered for Every Man
+    </p>
+
+    <p class="desc">
+      Affordable premium streetwear inspired by modern culture,
+      clean aesthetics, and confidence.
+    </p>
+
+    <a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn">
+      Follow on Instagram
     </a>
+
+    <footer>
+
+      <p>
+        📞 Pawan | +91 62398 19213
+      </p>
+
+      <p>
+        ✉️
+        <a href="mailto:fisixwear@gmail.com">
+          fisixwear@gmail.com
+        </a>
+      </p>
+
+      <p>
+        © 2026 FISIX. All rights reserved.
+      </p>
+
+    </footer>
+
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>📞 <strong>Pawan</strong> <span>|</span> +91-6239819213 <span>|</span> 
-      ✉️ <a href="mailto:fisixwear@gmail.com" style="color:#d4af37; text-decoration: underline;">fisixwear@gmail.com</a>
-    </p>
-    <p>© 2025 FISIX. All rights reserved.</p>
-  </footer>
-
 </body>
+
 </html>
