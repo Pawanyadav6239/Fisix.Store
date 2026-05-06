@@ -16,388 +16,331 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
+
 font-family:'Poppins',sans-serif;
-background:#0b0b0b;
+
+background:#070707;
+
+overflow:hidden;
+
 color:white;
-overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* BACKGROUND GLOW */
 
-.navbar{
+.bg-glow{
 
-position:fixed;
-top:0;
-left:0;
+position:absolute;
 
-width:100%;
+width:700px;
+height:700px;
 
-padding:22px 8%;
+background:rgba(212,175,55,0.15);
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+filter:blur(140px);
 
-background:rgba(0,0,0,0.45);
+border-radius:50%;
 
-backdrop-filter:blur(10px);
+top:-200px;
+right:-150px;
 
-z-index:1000;
+animation:floatGlow 8s ease-in-out infinite;
 }
 
-.logo-text{
-font-size:1.5rem;
-font-weight:700;
-letter-spacing:4px;
-color:#d4af37;
+@keyframes floatGlow{
+
+0%{
+transform:translateY(0px);
 }
 
-.nav-links{
-display:flex;
-gap:30px;
+50%{
+transform:translateY(30px);
 }
 
-.nav-links a{
-text-decoration:none;
-color:white;
-font-size:0.95rem;
-transition:0.3s;
+100%{
+transform:translateY(0px);
 }
 
-.nav-links a:hover{
-color:#d4af37;
 }
 
 /* HERO */
 
 .hero{
 
+position:relative;
+
 min-height:100vh;
 
 display:flex;
+justify-content:center;
 align-items:center;
-justify-content:space-between;
 
-padding:120px 8% 80px;
+padding:20px;
 
-background:
-linear-gradient(to right,
-rgba(0,0,0,0.92),
-rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat;
+overflow:hidden;
+}
+
+/* FLOATING CARD */
+
+.card{
 
 position:relative;
+
+width:420px;
+
+padding:45px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.55),
+0 0 40px rgba(212,175,55,0.08);
+
+text-align:center;
+
+transform-style:preserve-3d;
+
+animation:floatCard 5s ease-in-out infinite;
 }
 
-.hero::before{
+@keyframes floatCard{
 
-content:'';
-
-position:absolute;
-
-width:500px;
-height:500px;
-
-background:rgba(212,175,55,0.12);
-
-border-radius:50%;
-
-filter:blur(120px);
-
-top:-150px;
-right:-100px;
+0%{
+transform:translateY(0px);
 }
 
-/* LEFT */
-
-.hero-left{
-max-width:650px;
-z-index:2;
+50%{
+transform:translateY(-18px);
 }
 
-.brand-small{
-color:#d4af37;
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* LOGO */
+
+.logo{
+
+width:130px;
+
+margin-bottom:25px;
+
+border-radius:16px;
+
+filter:drop-shadow(0 0 15px rgba(212,175,55,0.2));
+}
+
+/* BRAND */
+
+.small-text{
+
 letter-spacing:4px;
-font-size:0.9rem;
-margin-bottom:20px;
+
+font-size:0.8rem;
+
+color:#d4af37;
+
+margin-bottom:15px;
 }
 
 h1{
 
-font-size:6.5rem;
-line-height:0.95;
+font-size:5rem;
+
 font-weight:800;
 
-margin-bottom:25px;
+letter-spacing:10px;
+
+line-height:1;
+
+margin-bottom:20px;
 }
 
-.highlight{
+.gold{
 color:#d4af37;
 }
 
 .tagline{
 
-font-size:1.25rem;
+font-size:1rem;
+
 line-height:2;
+
 color:#d0d0d0;
 
-margin-bottom:40px;
-max-width:600px;
+margin-bottom:35px;
 }
 
-/* BUTTONS */
-
-.buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
+/* BUTTON */
 
 .btn{
+
+display:inline-block;
 
 padding:16px 34px;
 
 border-radius:50px;
+
+background:#d4af37;
+
+color:#111;
 
 text-decoration:none;
 
 font-weight:600;
 
 transition:0.35s ease;
+
+box-shadow:0 12px 35px rgba(212,175,55,0.22);
 }
 
-.primary{
+.btn:hover{
 
-background:#d4af37;
-color:#111;
+transform:translateY(-5px) scale(1.04);
 
-box-shadow:0 10px 30px rgba(212,175,55,0.25);
-}
-
-.primary:hover{
-transform:translateY(-5px);
 background:#ebc95b;
 }
 
-.secondary{
+/* FLOATING CIRCLES */
 
-border:1px solid rgba(255,255,255,0.25);
+.circle1,
+.circle2{
 
-color:white;
+position:absolute;
 
-background:rgba(255,255,255,0.05);
+border-radius:50%;
+
+background:rgba(255,255,255,0.04);
 
 backdrop-filter:blur(10px);
 }
 
-.secondary:hover{
-background:white;
-color:#111;
-transform:translateY(-5px);
+.circle1{
+
+width:180px;
+height:180px;
+
+top:12%;
+left:12%;
+
+animation:move1 6s ease-in-out infinite;
 }
 
-/* RIGHT SIDE */
+.circle2{
 
-.hero-right{
+width:120px;
+height:120px;
 
-display:flex;
-justify-content:center;
-align-items:center;
+bottom:15%;
+right:15%;
 
-z-index:2;
+animation:move2 7s ease-in-out infinite;
 }
 
-.hero-card{
+@keyframes move1{
 
-width:320px;
-
-background:rgba(255,255,255,0.06);
-
-border:1px solid rgba(255,255,255,0.08);
-
-backdrop-filter:blur(15px);
-
-border-radius:30px;
-
-padding:25px;
-
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
-
-transform:rotate(-4deg);
-
-transition:0.4s ease;
+0%{
+transform:translateY(0px);
 }
 
-.hero-card:hover{
-transform:rotate(0deg) scale(1.03);
+50%{
+transform:translateY(-25px);
 }
 
-.hero-card img{
-
-width:100%;
-
-border-radius:20px;
-
-margin-bottom:20px;
+100%{
+transform:translateY(0px);
 }
 
-.hero-card h3{
-font-size:1.5rem;
-margin-bottom:10px;
 }
 
-.hero-card p{
-color:#cfcfcf;
-line-height:1.8;
-font-size:0.95rem;
+@keyframes move2{
+
+0%{
+transform:translateY(0px);
 }
 
-/* ABOUT */
-
-.about{
-
-padding:120px 10%;
-
-background:#101010;
-
-text-align:center;
+50%{
+transform:translateY(20px);
 }
 
-.about h2{
-
-font-size:3rem;
-
-margin-bottom:30px;
-
-color:#d4af37;
+100%{
+transform:translateY(0px);
 }
 
-.about p{
-
-max-width:1000px;
-
-margin:auto;
-
-line-height:2.3;
-
-font-size:1rem;
-
-color:#d0d0d0;
-}
-
-/* QUOTE SECTION */
-
-.quote{
-
-padding:100px 20px;
-
-text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
-url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-}
-
-.quote h2{
-
-font-size:3rem;
-
-max-width:900px;
-
-margin:auto;
-
-line-height:1.5;
-
-font-weight:700;
-}
-
-.quote span{
-color:#d4af37;
 }
 
 /* FOOTER */
 
-footer{
+.footer{
 
-padding:50px 20px;
+position:absolute;
+
+bottom:20px;
+
+width:100%;
 
 text-align:center;
 
-background:#080808;
+font-size:0.9rem;
 
 color:#888;
 }
 
-footer a{
+.footer a{
 color:#d4af37;
 text-decoration:none;
 }
 
-footer a:hover{
-text-decoration:underline;
-}
-
 /* MOBILE */
 
-@media(max-width:1000px){
+@media(max-width:768px){
 
-.hero{
+.card{
 
-flex-direction:column;
+width:100%;
 
-text-align:center;
+max-width:340px;
 
-padding:120px 20px 80px;
-}
-
-.hero-left{
-max-width:100%;
-}
-
-.hero-right{
-margin-top:60px;
+padding:35px 25px;
 }
 
 h1{
-font-size:3.8rem;
+
+font-size:3rem;
+
+letter-spacing:5px;
 }
 
 .tagline{
-font-size:1rem;
+font-size:0.92rem;
+line-height:1.9;
 }
 
-.buttons{
-justify-content:center;
+.logo{
+width:100px;
 }
 
-.hero-card{
-width:100%;
-max-width:320px;
+.circle1{
+width:120px;
+height:120px;
+left:-30px;
 }
 
-.nav-links{
-display:none;
-}
-
-.about{
-padding:80px 20px;
-}
-
-.about h2{
-font-size:2.2rem;
-}
-
-.about p{
-font-size:0.95rem;
-line-height:2;
-}
-
-.quote h2{
-font-size:2rem;
+.circle2{
+width:90px;
+height:90px;
+right:-20px;
 }
 
 }
@@ -408,148 +351,45 @@ font-size:2rem;
 
 <body>
 
-<!-- NAVBAR -->
+<div class="bg-glow"></div>
 
-<nav class="navbar">
-
-<div class="logo-text">
-FISIX
-</div>
-
-<div class="nav-links">
-
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="https://www.instagram.com/fisix.store/" target="_blank">Instagram</a>
-
-</div>
-
-</nav>
-
-<!-- HERO -->
+<div class="circle1"></div>
+<div class="circle2"></div>
 
 <section class="hero">
 
-<div class="hero-left">
+<div class="card">
 
-<p class="brand-small">
+<img src="fisix-logo.png" alt="FISIX Logo" class="logo">
+
+<p class="small-text">
 PREMIUM STREETWEAR
 </p>
 
 <h1>
-WEAR THE <span class="highlight">CONFIDENCE</span>
+FI<span class="gold">SIX</span>
 </h1>
 
 <p class="tagline">
 
-Affordable premium fashion inspired by street culture,
-minimal aesthetics, oversized fits, and modern confidence.
-
-Designed for the generation that wants to stand out
-without trying too hard.
+Minimal aesthetics.
+Oversized confidence.
+Affordable premium fashion
+inspired by modern street culture.
 
 </p>
 
-<div class="buttons">
+<a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn">
 
-<a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn primary">
 Explore Collection
-</a>
 
-<a href="mailto:fisixwear@gmail.com" class="btn secondary">
-Contact Us
 </a>
 
 </div>
 
-</div>
-
-<div class="hero-right">
-
-<div class="hero-card">
-
-<img src="fisix-logo.png" alt="FISIX">
-
-<h3>FISIX</h3>
-
-<p>
-
-Minimal.
-Bold.
-Affordable.
-
-Streetwear built for everyday confidence.
-
-</p>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<h2>Our Story</h2>
-
-<p>
-
-FISIX started with one simple thought —
-why does good fashion always have to feel overpriced?
-
-Everywhere we looked,
-either the quality was bad,
-the designs felt outdated,
-or brands were charging luxury prices just for a logo.
-
-We knew our generation wanted something different.
-
-Something clean.
-Something confident.
-Something premium without trying too hard.
-
-So FISIX was built for people who care about style,
-but don’t believe looking good should destroy your wallet.
-
-Inspired by street culture,
-modern aesthetics,
-oversized silhouettes,
-and everyday confidence —
-FISIX is more than clothing.
-
-It’s a mindset.
-
-Minimal.
-Bold.
-Affordable.
-
-Made for the generation that creates its own identity
-instead of copying trends.
-
-Welcome to FISIX.
-
-</p>
-
-</section>
-
-<!-- QUOTE -->
-
-<section class="quote">
-
-<h2>
-
-“Fashion fades,
-but <span>confidence</span> never goes out of style.”
-
-</h2>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
+<div class="footer">
 
 <p>
 📞 Pawan | +91 62398 19213
@@ -562,13 +402,7 @@ fisixwear@gmail.com
 </a>
 </p>
 
-<br>
-
-<p>
-© 2026 FISIX. All rights reserved.
-</p>
-
-</footer>
+</div>
 
 </body>
 
