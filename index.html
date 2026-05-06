@@ -3,159 +3,305 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FISIX | Premium Streetwear</title>
 
-  <title>FISIX | Affordable Premium Streetwear</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    body{
-      background:#0f0f0f;
-      color:#d4af37;
-      font-family:Arial, sans-serif;
+body{
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
+}
 
-      min-height:100vh;
+/* HERO SECTION */
 
-      display:flex;
-      justify-content:center;
-      align-items:center;
+.hero{
 
-      text-align:center;
+min-height:100vh;
 
-      padding:20px;
-    }
+display:flex;
+flex-direction:column;
 
-    .container{
-      max-width:700px;
-    }
+justify-content:center;
+align-items:center;
 
-    .logo{
-      width:140px;
-      margin-bottom:30px;
-      border-radius:10px;
-    }
+text-align:center;
 
-    h1{
-      font-size:3rem;
-      margin-bottom:15px;
-      letter-spacing:4px;
-    }
+padding:20px;
 
-    .tagline{
-      color:#ffffff;
-      font-size:1.2rem;
-      margin-bottom:15px;
-    }
+background:
+linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
 
-    .desc{
-      color:#bbbbbb;
-      line-height:1.7;
-      margin-bottom:40px;
-    }
+.logo{
+width:150px;
+margin-bottom:25px;
+border-radius:12px;
+}
 
-    .btn{
-      display:inline-block;
+h1{
+font-size:5rem;
+letter-spacing:10px;
+color:#d4af37;
+margin-bottom:10px;
+}
 
-      background:#d4af37;
-      color:#111111;
+.tagline{
+font-size:1.4rem;
+font-weight:300;
+margin-bottom:20px;
+}
 
-      padding:14px 28px;
+.desc{
+max-width:700px;
+color:#d1d1d1;
+line-height:1.8;
+margin-bottom:40px;
+font-size:1rem;
+}
 
-      text-decoration:none;
+/* BUTTONS */
 
-      border-radius:40px;
+.buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-      font-weight:bold;
+.btn{
 
-      transition:0.3s ease;
-    }
+padding:15px 32px;
 
-    .btn:hover{
-      transform:translateY(-3px);
-      background:#ebc95b;
-    }
+border-radius:50px;
 
-    footer{
-      margin-top:50px;
-      color:#888888;
-      font-size:0.95rem;
-      line-height:1.8;
-    }
+text-decoration:none;
 
-    footer a{
-      color:#d4af37;
-      text-decoration:none;
-    }
+font-weight:600;
 
-    @media(max-width:768px){
+transition:0.3s ease;
+}
 
-      h1{
-        font-size:2.2rem;
-      }
+.primary{
+background:#d4af37;
+color:#111;
+}
 
-      .tagline{
-        font-size:1rem;
-      }
+.primary:hover{
+background:#ebc95b;
+transform:translateY(-4px);
+}
 
-      .desc{
-        font-size:0.95rem;
-      }
+.secondary{
+border:1px solid #d4af37;
+color:#d4af37;
+}
 
-    }
+.secondary:hover{
+background:#d4af37;
+color:#111;
+transform:translateY(-4px);
+}
 
-  </style>
+/* SECTION */
+
+.section{
+
+padding:90px 20px;
+
+text-align:center;
+
+background:#111;
+}
+
+.section h2{
+font-size:2.8rem;
+margin-bottom:25px;
+color:#d4af37;
+}
+
+.section p{
+max-width:900px;
+margin:auto;
+line-height:2;
+color:#cfcfcf;
+font-size:1rem;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:45px 20px;
+
+text-align:center;
+
+background:#0a0a0a;
+
+color:#888;
+}
+
+footer a{
+color:#d4af37;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:3rem;
+letter-spacing:5px;
+}
+
+.tagline{
+font-size:1rem;
+}
+
+.desc{
+font-size:0.95rem;
+}
+
+.buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.btn{
+width:250px;
+}
+
+.logo{
+width:120px;
+}
+
+.section h2{
+font-size:2rem;
+}
+
+.section p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HERO -->
 
-    <img src="fisix-logo.png" class="logo" alt="FISIX Logo">
+<section class="hero">
 
-    <h1>FISIX</h1>
+<img src="fisix-logo.png" alt="FISIX Logo" class="logo">
 
-    <p class="tagline">
-      Engineered for Every Man
-    </p>
+<h1>FISIX</h1>
 
-    <p class="desc">
-      Affordable premium streetwear inspired by modern culture,
-      clean aesthetics, and confidence.
-    </p>
+<p class="tagline">
+Engineered for Every Man
+</p>
 
-    <a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn">
-      Follow on Instagram
-    </a>
+<p class="desc">
+Affordable premium streetwear inspired by modern culture,
+minimal aesthetics, and everyday confidence.
+Designed to look expensive — without being expensive.
+</p>
 
-    <footer>
+<div class="buttons">
 
-      <p>
-        📞 Pawan | +91 62398 19213
-      </p>
+<a href="https://www.instagram.com/fisix.store/" target="_blank" class="btn primary">
+Explore Collection
+</a>
 
-      <p>
-        ✉️
-        <a href="mailto:fisixwear@gmail.com">
-          fisixwear@gmail.com
-        </a>
-      </p>
+<a href="mailto:fisixwear@gmail.com" class="btn secondary">
+Contact Us
+</a>
 
-      <p>
-        © 2026 FISIX. All rights reserved.
-      </p>
+</div>
 
-    </footer>
+</section>
 
-  </div>
+<!-- ABOUT SECTION -->
+
+<section class="section">
+
+<h2>Our Story</h2>
+
+<p>
+
+FISIX started with one simple thought — why does good fashion always have to feel overpriced?
+
+Everywhere we looked, either the quality was bad, the designs felt outdated,
+or brands were charging luxury prices just for a logo.
+We knew our generation wanted something different.
+
+Something clean.
+Something confident.
+Something premium without trying too hard.
+
+So FISIX was built for the people who care about style,
+but don’t believe looking good should destroy your wallet.
+
+Inspired by street culture, modern aesthetics, oversized silhouettes,
+and everyday confidence — FISIX is more than clothing.
+It’s a mindset.
+
+Minimal.
+Bold.
+Affordable.
+Made for the new generation that creates its own identity instead of copying trends.
+
+This is just the beginning.
+
+Welcome to FISIX.
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+📞 Pawan | +91 62398 19213
+</p>
+
+<p>
+✉️
+<a href="mailto:fisixwear@gmail.com">
+fisixwear@gmail.com
+</a>
+</p>
+
+<br>
+
+<p>
+© 2026 FISIX. All rights reserved.
+</p>
+
+</footer>
 
 </body>
 
